@@ -16,13 +16,21 @@ class PAWNSEXPLORATION_API AMachineRobot : public AMachinePawn
 	GENERATED_BODY()
 	
 public:
+
+	AMachineRobot();
+
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	// Enhance input actions and context objects
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input");
 	class UInputMappingContext* TankMappingContext;
 
@@ -46,6 +54,7 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class UCameraComponent* Camera;
 
+	// Variables to manipulate movement and rotation speed
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	int32 Speed = 400;
 

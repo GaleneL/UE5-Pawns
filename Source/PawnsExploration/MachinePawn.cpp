@@ -23,6 +23,11 @@ void AMachinePawn::BeginPlay()
 
 void AMachinePawn::RotateTurret(FVector LookAtTarget)
 {
+	/*
+	Rotates the TurretMesh to the direction of LookAtTarget
+	LookAtTarget: Position of the target where the actor should be rotated to.
+	*/
+
 	// Get the vector and rotator between current turret mesh pawn to the target position
 	FVector ToTarget = LookAtTarget - TurretMesh->GetComponentLocation();
 	FRotator LookAtRotation = FRotator(0.f, ToTarget.Rotation().Yaw, 0.f);
@@ -39,5 +44,9 @@ void AMachinePawn::RotateTurret(FVector LookAtTarget)
 
 void AMachinePawn::Fire()
 {
+	/*
+	Draw debug sphere from the weapong mesh when input action IA_Fire is started
+	*/
+
 	DrawDebugSphere(GetWorld(), ProjectileSpawnPoint->GetComponentLocation(), 10, 10, FColor::Red, false, 3.f);
 }

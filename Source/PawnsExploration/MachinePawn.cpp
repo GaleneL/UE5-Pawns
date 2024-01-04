@@ -10,10 +10,10 @@ AMachinePawn::AMachinePawn()
 
 	// Initialize components
 	TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>("Turret Mesh");
-	TurretMesh->SetupAttachment(RootComponent);
+	TurretMesh->SetupAttachment(BaseMesh);
 
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>("Projectile Spawn Point");
-	ProjectileSpawnPoint->SetupAttachment(RootComponent);
+	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
 }
 
 void AMachinePawn::BeginPlay()

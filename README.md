@@ -15,3 +15,17 @@ The MachinePawn.h has the posibility of shoot projectiles with the Fire() method
 MachineRobot.h is a player controllable pawn. Properties to manage enhanced input action were set (TankMappingContext, MoveAction, TurnAction, FireAction). Also a SprintArm and Camera components to watch the pawn in a comfortable position were added. Variables to set the movement speed and turn speed were added with the corresponding methods to achieve the movement.
 
 Finally the NPC MachineTower.h Pawn can check if the player is in range to be attacked and a timer was written to shoot to the player each 2 seconds by default.
+
+https://github.com/GaleneL/UE5-Pawns/assets/86707868/961c99ef-a09c-4ac2-b292-4262538b05fc
+
+In Tick() function from MachineRobot.h is the code responsible to get the position of the mouse cursor and draw a blue debug sphere in the world space. That position is used to method RotateTurret() in the parent class MachinePawn.h to rotate the turret static mesh component of the robot as the above video shows.
+
+https://github.com/GaleneL/UE5-Pawns/assets/86707868/ce3a3377-89b1-4221-87eb-f45d05b7591a
+
+The TowerMachine.h Pawn is idle, but when the player robot get close enough to a enemy tower, the tower use the same function RotateTurret() in class MachinePawn.h to point to the player, and the method Fire() draws a red debug sphere where the projectile should be shot.
+
+https://github.com/GaleneL/UE5-Pawns/assets/86707868/9ac26b5b-e06b-4bb5-8cbf-41a832b3d575
+
+Finally, MachineRobot.h also is able to use the function Fire() of the parent, which also draws the same red debug spheres.
+
+## 2D Character

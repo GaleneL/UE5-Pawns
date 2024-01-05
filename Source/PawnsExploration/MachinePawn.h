@@ -22,6 +22,9 @@ protected:
 	void RotateTurret(FVector LookAtTarget);
 	void Fire();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
+	float RotationRate = 5.f;
+
 private:
 	// Static mesh of the part of the pawn that shoots
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))

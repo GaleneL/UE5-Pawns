@@ -31,13 +31,13 @@ void AMachinePawn::RotateTurret(FVector LookAtTarget)
 	// Get the vector and rotator between current turret mesh pawn to the target position
 	FVector ToTarget = LookAtTarget - TurretMesh->GetComponentLocation();
 	FRotator LookAtRotation = FRotator(0.f, ToTarget.Rotation().Yaw, 0.f);
-	// Set the rotation of the mesh
+	// Set the rotation of the mesh with interpolation to avoid too fast rotations
 	TurretMesh->SetWorldRotation(
 		FMath::RInterpTo(
 			TurretMesh->GetComponentRotation(),
 			LookAtRotation,
 			UGameplayStatics::GetWorldDeltaSeconds(this),
-			5.f
+			RotationRate
 		)
 	);
 }
@@ -48,5 +48,5 @@ void AMachinePawn::Fire()
 	Draw debug sphere from the weapong mesh when input action IA_Fire is started
 	*/
 
-	DrawDebugSphere(GetWorld(), ProjectileSpawnPoint->GetComponentLocation(), 10, 10, FColor::Red, false, 3.f);
+	DrawDebugSphere(GetWorld(), ProjectileSpawnPoint->GetComponentLocation(), 20, 10, FColor::Red, false, 3.f);
 }

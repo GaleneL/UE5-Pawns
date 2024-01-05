@@ -43,14 +43,15 @@ void AMachineRobot::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// Draw a debug sphere in the world where the mouse cursor is pointing
+	// Rotate turret to the position of the mouse cursor and draw a debug sphere in the world
+	// where the mouse cursor is pointing 
 	if (PlayerControllerRef)
 	{
 		FHitResult HitResult;
 		PlayerControllerRef->GetHitResultUnderCursor(ECollisionChannel::ECC_Visibility, false, HitResult);
 		HitResult.GetActor();
 
-		DrawDebugSphere(GetWorld(), HitResult.ImpactPoint, 10, 10, FColor::Red, false, -1.f);
+		DrawDebugSphere(GetWorld(), HitResult.ImpactPoint, 20, 20, FColor::Blue, false, -1.f);
 		RotateTurret(HitResult.ImpactPoint);
 	}
 }

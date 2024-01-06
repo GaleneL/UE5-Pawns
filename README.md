@@ -29,3 +29,18 @@ https://github.com/GaleneL/UE5-Pawns/assets/86707868/9ac26b5b-e06b-4bb5-8cbf-41a
 Finally, MachineRobot.h also is able to use the function Fire() of the parent, which also draws the same red debug spheres.
 
 ## 2D Character
+
+This part of the project is the development of a 2D Character and 2D enemies in 3D environments with blueprints and PaperZD plugin.
+
+https://github.com/GaleneL/UE5-Pawns/assets/86707868/4a3ade91-af6c-4870-9166-d695ff1daf2c
+
+Animations were set by state machine inside an animation blueprint of the PaperZD plugin, and are allocated in an animation source object.
+
+![image](https://github.com/GaleneL/UE5-Pawns/assets/86707868/d9f35ef4-b0d4-4939-ad3a-ecd8292b9c41)
+
+https://github.com/GaleneL/UE5-Pawns/assets/86707868/6f5f0484-5609-4749-905c-1ea898fd8fd5
+
+
+
+
+

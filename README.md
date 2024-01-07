@@ -45,6 +45,13 @@ The BP_Base2DChar has a box collision component with the name Hitbox, this is ac
 
 https://github.com/GaleneL/UE5-Pawns/assets/86707868/ab12df27-99b9-4e99-b2ce-1ed89206c9f0
 
+And finally the enemy character is controlled by a behaviour tree and a simple blueprint class artificial intelligence controller. It gives the capability to chase the player as long as is not stunned. The stunned variable is transmitted from the blueprint class BP_Base2DCharacter to the blackboard object of the AIC_Enemy by an event dispatcher that is called when the variable IsStunned changes.
+
+https://github.com/GaleneL/UE5-Pawns/assets/86707868/71abadc4-b492-4030-8e3e-1206ac396d68
+
+
+
+
 
 
 

@@ -40,6 +40,12 @@ Animations were set by state machine inside an animation blueprint of the PaperZ
 
 https://github.com/GaleneL/UE5-Pawns/assets/86707868/6f5f0484-5609-4749-905c-1ea898fd8fd5
 
+The BP_Base2DChar has a box collision component with the name Hitbox, this is activated with a notify state blueprint in certain frames of the attack animation of the characters, when this hitbox is activated and the character that receives the attack has an overlap event from this hitbox the stunned animation is played.
+![image](https://github.com/GaleneL/UE5-Pawns/assets/86707868/894f8202-35e9-41c4-b98a-3e66c0969c5f)
+
+https://github.com/GaleneL/UE5-Pawns/assets/86707868/ab12df27-99b9-4e99-b2ce-1ed89206c9f0
+
+
 
 
 
